@@ -49,8 +49,8 @@ while True:
 
         if difficult != '3':
             if userInput != None:
-                print(f'Última opção válida inserida{userInput}')
-                print(f'Teve {checkHits()} acertos')
+                print(f'Last valid option entered: {userInput}')
+                print(f'You got {checkHits()} hits')
 
         print(f'\033[31mYou must enter at least {digits} digits\033[m')
 
