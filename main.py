@@ -10,8 +10,6 @@ def leftGame():
 def checkHits():
     return sum(1 for i in range(4) if password[i] == userInput[i])
 
-password = [str(randrange(10)), str(randrange(10)), str(randrange(10)), str(randrange(10))]
-
 # Set difficult
 print('What difficulty do you want to play?\n\n\033[32m[1] - Easy\033[m\n\033[33m[2] - Medium\033[m\n\033[31m[3] - Hard\033[m\n\033[34m[Other] - Exit\033[m')
 difficult = str(input('>>>'))
@@ -25,6 +23,8 @@ elif difficult == '3':
 else:
     leftGame()
 
+password = [str(randrange(10)) for _ in range(digits)]
+
 system('cls')
 print(f'I thought of a {digits} digit password. Can you guess?')
 
@@ -34,7 +34,7 @@ if difficult == '3':
 print('\033[33mSend any letter to leave.\033[m')
 
 # Showing password for debug
-# print(password)
+print(password)
 
 userInput = None
 
