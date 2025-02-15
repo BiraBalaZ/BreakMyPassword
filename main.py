@@ -65,11 +65,14 @@ while True:
     # Checking the numbers
     checkHits()
 
+    # If the difficulty is Hard, the game erase terminal so the player does not read the previous prompts
     if difficult == '3':
         system('cls')
 
+    # Printing hit count
     print(f'{checkHits()} correct numbers')
 
-    if checkHits() == 4:
+    # If the hit count is equal to digits, the game ends
+    if checkHits() == digits:
         print("\n🎉 Congratulations! All numbers are correct! 🎉")
         break
